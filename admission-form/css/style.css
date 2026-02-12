@@ -1,0 +1,133 @@
+/* Hide the default radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Style the custom radio buttons */
+input[type="radio"] + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style the label to show a square shape */
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+}
+
+/* Style the custom radio buttons when checked */
+input[type="radio"]:checked + label::before {
+  background-color: #999;
+}
+
+.box {
+  border: 1px solid green;
+}
+.box h6 {
+  border-bottom: 3px solid green;
+  padding: 4px;
+}
+
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 10px auto;
+  .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+    input {
+      display: none;
+      + label {
+        display: inline-block;
+        width: 187px;
+        height: 187px;
+        margin-bottom: 0;
+        border-radius: 100%;
+        /* background: #ffffff; */
+        /* border: 1px solid transparent; */
+        /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12); */
+        cursor: pointer;
+        font-weight: normal;
+        transition: all 0.2s ease-in-out;
+        /* &:hover {
+                background: #f1f1f1;
+                border-color: #d6d6d6;
+              } */
+        /* &:after {
+                content: "\f040";
+                font-family: "FontAwesome";
+                color: #757575;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: auto;
+              } */
+      }
+    }
+  }
+  .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #f8f8f8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    > div {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+select,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  border-bottom: dotted #000 2px;
+  background-color: transparent;
+}
+.special-table table tr > th:first-child {
+  position: sticky;
+  left: -1px;
+  border: none;
+  font-weight: bolder;
+}
+.special-table table th[scope="col"]:first-child {
+  background-color: black; /* Set the background color for th:first-child */
+}
+.special-table table th:first-child {
+  background-color: white; /* Set the background color for th:first-child */
+}
+.special-table table th,
+.special-table table td {
+  border: 1px solid black; /* Set your desired border style */
+}
+
+canvas {
+  height: 53px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
